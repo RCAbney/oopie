@@ -84,20 +84,19 @@ function App() {
       <hr />
       <section>
         <>
-          <p>Login response from Google (POST response.code to backend)</p>
           {initialCode && (
             <p>
-              {" "}
-              response.code:&nbsp;
-              <code>{initialCode}</code>
+              Login response from Google (POST response.code to backend)
+              <code>response.code:&nbsp;{initialCode}</code>
             </p>
           )}
-          <p>
-            The backend recieves response.code and returns an object with three
-            tokens
-          </p>
+          <hr />
           {beTokens.access_token && (
             <>
+              <p>
+                The backend recieves response.code and returns an object with
+                three tokens
+              </p>
               <p>
                 tokens.access_token: <code>{beTokens.access_token}</code>
               </p>
